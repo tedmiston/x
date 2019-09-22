@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: k3s
         run: |
-          curl -sfL https://get.k3s.io | sh -
+          sudo curl -sfL https://get.k3s.io | sh -
           sudo k3s kubectl get nodes
           sudo k3s kubectl get pods
