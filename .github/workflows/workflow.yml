@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches-ignore:
-      - argo
+      - tedmiston/argo
 jobs:
   build:
     runs-on: ubuntu-latest
