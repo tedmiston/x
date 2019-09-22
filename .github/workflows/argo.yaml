@@ -1,0 +1,11 @@
+name: Argo
+on:
+  push:
+    branches:
+      - argo
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install k3s
+        run: curl -sfL https://get.k3s.io | sh -
