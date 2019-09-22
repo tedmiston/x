@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Install k3s
         run: curl -sfL https://get.k3s.io | sh -
-      - run: sudo k3s server &
       - run: sudo k3s kubectl get nodes
+      - run: sudo k3s kubectl get pods
