@@ -11,6 +11,7 @@ jobs:
         run: |
           sudo curl -sfL https://get.k3s.io | sh -
           sudo systemctl status k3s
+          sudo systemctl stop k3s
           echo "running k3s command"
           sudo k3s server &
           sudo k3s kubectl get nodes
