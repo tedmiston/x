@@ -12,6 +12,6 @@ jobs:
           sudo curl -sfL https://get.k3s.io | sh -
           sudo systemctl status k3s
           echo "running k3s command"
-          k3s server &
+          sudo k3s server &
           sudo k3s kubectl get nodes
           sudo k3s kubectl get pods --all-namespaces
