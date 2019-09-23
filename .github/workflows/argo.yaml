@@ -7,5 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: k3s
         run: argo/setup.sh
