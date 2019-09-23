@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: k3s
-        run: ./argo/setup.sh
+        run: argo/setup.sh
