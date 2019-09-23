@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euxo pipefail
+
 sudo curl -sfL https://get.k3s.io | sh -
 sudo systemctl status k3s
 sudo k3s kubectl --version
