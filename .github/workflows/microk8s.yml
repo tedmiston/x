@@ -1,0 +1,9 @@
+name: MicroK8s
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+      - run: sudo snap install microk8s --classic
