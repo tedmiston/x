@@ -18,8 +18,8 @@ RUN sudo apt-get install -y chromium-browser
 
 USER gitpod
 # FROM python:3
-RUN pip install -U pip
-RUN pip install selenium
+RUN pip3 install -U pip
+RUN pip3 install selenium
 COPY entrypoint.sh entrypoint.sh
 COPY app.py app.py
 CMD entrypoint.sh
