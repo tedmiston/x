@@ -12,4 +12,4 @@ USER gitpod
 # More information: https://www.gitpod.io/docs/42_config_docker/
 
 RUN sudo apt-get update
-RUN sudo apt-get install docker
+RUN sudo apt-get install -y docker
