@@ -13,11 +13,8 @@ USER gitpod
 
 USER root
 RUN sudo apt-get update
-RUN sudo apt-get install -y docker
 RUN sudo apt-get install -y chromium-browser
 
 USER gitpod
-# FROM python:3
-RUN pip3 install -U pip
-RUN pip3 install selenium
+RUN pip3 install -U pip selenium
 USER gitpod
