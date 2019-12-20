@@ -20,7 +20,7 @@ USER gitpod
 # FROM python:3
 RUN pip3 install -U pip
 RUN pip3 install selenium
-COPY entrypoint.sh entrypoint.sh
-COPY app.py app.py
+COPY selenium-ci/entrypoint.sh entrypoint.sh
+COPY selenium-ci/app.py app.py
 CMD entrypoint.sh
 USER gitpod
