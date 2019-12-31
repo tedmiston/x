@@ -8,4 +8,4 @@ jobs:
         uses: actions/checkout@v1
       - uses: docker://bats/bats:latest
         with:
-          args: --version
+          args: addition.bats
