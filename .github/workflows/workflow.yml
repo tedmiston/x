@@ -14,4 +14,4 @@ jobs:
       - name: Setup
         run: sudo apt install -y dc 
       - name: Run Bats tests
-        run: bats bats-ci/addition.bats
+        run: bats bats-ci/tests/
