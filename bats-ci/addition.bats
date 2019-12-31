@@ -5,11 +5,6 @@
   [ "$result" == "foo" ]
 }
 
-@test "assignment 2" {
-  result="$(echo foo)"
-  [ "$result" == "foo2" ]
-}
-
 # @test "addition using bc" {
 #   result="$(echo 2+2 | bc)"
 #   [ "$result" -eq 4 ]
