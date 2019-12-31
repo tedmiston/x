@@ -13,4 +13,4 @@ jobs:
           git clone https://github.com/bats-core/bats-core.git
           cd bats-core
           sudo ./install.sh /usr/local
-      - run: bats --version
+      - run: bats bats-ci/addition.bats
