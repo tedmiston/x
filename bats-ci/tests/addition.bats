@@ -1,10 +1,5 @@
 #!/usr/bin/env bats
 
-@test "assignment" {
-  result="$(echo foo)"
-  [ "$result" == "foo" ]
-}
-
 @test "addition using bc" {
   result="$(echo 2+2 | bc)"
   [ "$result" -eq 4 ]
