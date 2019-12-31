@@ -6,6 +6,11 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - uses: docker://bats/bats:latest
-        with:
-          args: bats-ci/addition.bats
+#       - uses: docker://bats/bats:latest
+#         with:
+#           args: bats-ci/addition.bats
+      - run: |
+          git clone https://github.com/bats-core/bats-core.git
+          cd bats-core
+          ./install.sh /usr/local
+      - run: bats --version
