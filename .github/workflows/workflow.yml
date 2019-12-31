@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - run: pwd && ls -al
       - uses: docker://bats/bats:latest
         with:
-          args: addition.bats
+          args: bats-ci/addition.bats
