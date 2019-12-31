@@ -1,0 +1,17 @@
+name: Bats
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+      - name: Build Bats
+        run: |
+          git clone https://github.com/bats-core/bats-core.git
+          cd bats-core
+          sudo ./install.sh /usr/local
+      - name: Setup
+        run: sudo apt install -y dc 
+      - name: Run Bats tests
+        run: bats bats-ci/tests/
