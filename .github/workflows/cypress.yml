@@ -10,7 +10,12 @@ jobs:
       #   run: npm install cypress
       - name: Install Serve
         run: yarn global add serve
-      - name: Run Cypress
-        uses: docker://cypress/included:3.8.1
-        with:
-          args: cypress-ci
+      - name: Serve site
+        run: |
+          cd cypress-ci
+          serve src
+        timeout-minutes: 1
+#       - name: Run Cypress
+#         uses: docker://cypress/included:3.8.1
+#         with:
+#           args: cypress-ci
