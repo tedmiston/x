@@ -8,8 +8,8 @@ jobs:
         uses: actions/checkout@v1
       # - name: Install Cypress
       #   run: npm install cypress
-      - name: Setup
-        run: echo todo
+      - name: Install Serve
+        run: yarn global add serve
       - name: Run Cypress
         uses: docker://cypress/included:3.8.1
         with:
