@@ -7,7 +7,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Install Cypress
-        run: sudo npm install -g cypress
+        run: npm install cypress
       - name: Setup
         run: echo todo
       - name: Run Cypress
