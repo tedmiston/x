@@ -12,3 +12,5 @@ jobs:
         run: echo todo
       - name: Run Cypress
         uses: docker://cypress/included:3.8.1
+        with:
+          args: cypress-ci
