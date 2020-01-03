@@ -2,6 +2,6 @@
   "name": "cypress-ci",
   "scripts": {
     "start": "serve src",
-    "test": "cypress run"
+    "test": "cypress run --headless"
   }
 }
