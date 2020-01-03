@@ -11,7 +11,7 @@ jobs:
       - name: Run Cypress
         run: |
           cd cypress-ci
-          yarn run test
+          yarn run ci
 #       - name: Install Serve
 #         run: yarn global add serve
 #       - name: Serve site
