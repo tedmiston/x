@@ -1,0 +1,14 @@
+name: Cypress
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+      - name: Install Cypress
+        run: echo todo
+      - name: Setup
+        run: echo todo
+      - name: Run Cypress
+        run: echo todo
