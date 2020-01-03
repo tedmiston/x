@@ -7,7 +7,7 @@ describe('My First Test', function() {
 describe('My Second Test', function() {
   it('Visits the Homepage', function() {
     cy.visit('http://localhost:5000/')
-    cy.contains('This is a toast')
+    cy.contains('This is a test')
   })
 })
 
