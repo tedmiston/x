@@ -10,3 +10,5 @@ jobs:
         run: yarn global add cypress serve start-server-and-test
       - name: Run Cypress
         run: cd cypress-ci && yarn run ci
+        env:
+          TERM: dumb
