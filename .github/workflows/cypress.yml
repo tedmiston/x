@@ -6,8 +6,8 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      # - name: Install Cypress
-      #   run: npm install cypress
+      - name: Install Cypress
+        run: yarn global add cypress
 #       - name: Install Serve
 #         run: yarn global add serve
 #       - name: Serve site
