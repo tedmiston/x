@@ -13,7 +13,7 @@ jobs:
       - name: Serve site
         run: |
           cd cypress-ci
-          serve src
+          yarn run start
         timeout-minutes: 1
 #       - name: Run Cypress
 #         uses: docker://cypress/included:3.8.1
