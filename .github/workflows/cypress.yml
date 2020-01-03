@@ -7,7 +7,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Install Cypress
-        run: yarn global add cypress
+        run: yarn global add cypress start-server-and-test
       - name: Run Cypress
         run: |
           cd cypress-ci
