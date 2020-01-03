@@ -1,6 +1,7 @@
 {
   "name": "cypress-ci",
   "scripts": {
-    "start": "serve src"
+    "start": "serve src",
+    "test": "cypress run"
   }
 }
