@@ -1,0 +1,14 @@
+name: Cypress
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+      - name: Install Cypress
+        run: yarn global add cypress serve start-server-and-test
+      - name: Run Cypress
+        run: cd cypress-ci && yarn run ci
+        env:
+          TERM: dumb
