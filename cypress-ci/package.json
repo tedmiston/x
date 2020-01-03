@@ -2,5 +2,5 @@
   "name": "cypress-ci",
   "scripts": {
     "start": "serve src"
-  },
+  }
 }
