@@ -9,15 +9,4 @@ jobs:
       - name: Install Cypress
         run: yarn global add cypress serve start-server-and-test
       - name: Run Cypress
-        run: |
-          cd cypress-ci
-          yarn run ci
-#       - name: Serve site
-#         run: |
-#           cd cypress-ci
-#           yarn run start
-#         timeout-minutes: 1
-#       - name: Run Cypress
-#         uses: docker://cypress/included:3.8.1
-#         with:
-#           args: cypress-ci
+        run: cd cypress-ci && yarn run ci
