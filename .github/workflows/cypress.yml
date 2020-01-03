@@ -8,6 +8,10 @@ jobs:
         uses: actions/checkout@v1
       - name: Install Cypress
         run: yarn global add cypress
+      - name: Run Cypress
+        run: |
+          cd cypress-ci
+          yarn run test
 #       - name: Install Serve
 #         run: yarn global add serve
 #       - name: Serve site
