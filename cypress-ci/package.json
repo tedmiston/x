@@ -2,6 +2,7 @@
   "name": "cypress-ci",
   "scripts": {
     "start": "serve src",
-    "test": "cypress run --headless"
+    "test": "cypress run --headless",
+    "ci": "start-server-and-test start http://localhost:5000 test"
   }
 }
