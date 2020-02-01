@@ -1,0 +1,12 @@
+tasks:
+
+  hello:  # a minimal bash task
+    task: echo hello from my task
+
+  world:  # a task with pre- and post-tasks
+    pre: pwd
+    task: uptime
+    post: date
+
+  add:  # add two numbers from env vars
+    task: expr ${INPUT_1} + ${INPUT_2}
