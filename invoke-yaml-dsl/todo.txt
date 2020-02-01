@@ -1,0 +1,2 @@
+- auto generate the invoke command functions programmatically from the parsed yaml
+- load yaml comment next to task id as the function's docstring (or a `description` key)
