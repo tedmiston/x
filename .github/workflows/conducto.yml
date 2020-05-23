@@ -1,0 +1,18 @@
+name: Conducto
+on:
+  push:
+    branches:
+      - test-conducto
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+      - name: Setup
+        run: |
+          python3 --version
+          pip3 install conducto
+      - name: Verify
+        run: |
+          conducto --version
