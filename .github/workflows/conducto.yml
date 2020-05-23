@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Setup
         run: |
           sudo python3 --version
@@ -17,3 +17,12 @@ jobs:
       - name: Verify
         run: |
           conducto --version
+      - name: Checkout Demo
+        uses: actions/checkout@v2
+        with:
+          repository: conducto/demo
+      - name: Hello World
+        run: |
+          pwd
+          cd demo
+          sudo python3 demo.py hello --local
