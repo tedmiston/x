@@ -32,6 +32,10 @@ jobs:
           expect "Email: "
           send "tedmiston@gmail.com\n"
           # interact
+          expect "Password: "
+          send $CONDUCTO_PASSWORD
           expect
           EOD
           echo done with expect
+        env:
+          CONDUCTO_PASSWORD: ${{ secrets.CONDUCTO_PASSWORD }}
