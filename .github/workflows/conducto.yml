@@ -27,4 +27,10 @@ jobs:
       - name: Run Hello World
         run: |
           cd demo
-          sudo python3 demo.py hello --local
+          expect <<EOD
+          spawn sudo python3 demo.py hello --local
+          expect "Email: "
+          send "tedmiston@gmail.com\n"
+          interact
+          EOD
+          echo done with expect
