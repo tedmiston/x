@@ -31,6 +31,6 @@ jobs:
           spawn sudo python3 demo.py hello --local
           expect "Email: "
           send "tedmiston@gmail.com\n"
-          interact
+          # interact
           EOD
           echo done with expect
