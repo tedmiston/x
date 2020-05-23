@@ -33,7 +33,7 @@ jobs:
           send "tedmiston@gmail.com\n"
           # interact
           expect "Password: "
-          send "${CONDUCTO_PASSWORD\n}"
+          send "${CONDUCTO_PASSWORD}\n"
           expect
           EOD
           echo done with expect
