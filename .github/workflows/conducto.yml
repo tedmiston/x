@@ -11,6 +11,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup
         run: |
+          sudo apt-get update -y
+          sudo apt-get install -y expect
           sudo python3 --version
           sudo pip3 install --upgrade pip
           sudo pip3 install conducto
@@ -22,11 +24,7 @@ jobs:
         with:
           repository: conducto/demo
           path: demo
-      - name: Hello World
+      - name: Run Hello World
         run: |
-          pwd
-          cd ${GITHUB_WORKSPACE}
-          pwd
-          ls -al
           cd demo
           sudo python3 demo.py hello --local
