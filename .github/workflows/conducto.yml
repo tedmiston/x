@@ -32,5 +32,6 @@ jobs:
           expect "Email: "
           send "tedmiston@gmail.com\n"
           # interact
+          expect
           EOD
           echo done with expect
