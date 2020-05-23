@@ -24,5 +24,9 @@ jobs:
       - name: Hello World
         run: |
           pwd
+          ls -al
+          cd
+          pwd
+          ls -al
           cd demo
           sudo python3 demo.py hello --local
