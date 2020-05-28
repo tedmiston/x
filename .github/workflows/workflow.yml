@@ -10,13 +10,13 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - name: Branch ID
-        run: echo "##[set-output name=id;]$(git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}')"
-        id: branch
       - name: git log
         run: git --no-pager log
       - name: git log par
         run: git --no-pager log --first-parent
+      - name: Branch ID
+        run: echo "##[set-output name=id;]$(git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}')"
+        id: branch
       - name: echo
         run: echo ${{ steps.branch.outputs.id }}
       - name: showref
