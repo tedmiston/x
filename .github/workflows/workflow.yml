@@ -12,15 +12,13 @@ jobs:
         uses: actions/checkout@v1
       - name: git log
         run: git --no-pager log
-      - name: git log par
-        run: git --no-pager log --first-parent
+      - name: showref
+        run: git show-ref
       - name: Branch ID
         run: echo "##[set-output name=id;]$(git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}')"
         id: branch
       - name: echo
         run: echo ${{ steps.branch.outputs.id }}
-      - name: showref
-        run: git show-ref
       - name: Match Branch
         run: git show-ref | grep ${{ steps.branch.outputs.id }} | awk '{print $2;}'
 
