@@ -12,13 +12,13 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
+      - name: Set Env
+        run: echo '::set-env name=BRANCH_ID::`git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}'`'
       - name: Github
         run: git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}'
       - name: Github
         run: git show-ref | grep $BRANCH_ID
         env:
-          BRANCH_ID: git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}'`
+          BRANCH_ID: git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}'
       - name: Build
         run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
