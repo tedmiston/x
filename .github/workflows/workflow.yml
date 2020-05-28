@@ -3,16 +3,16 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
-      - name: Build
-        run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
+      - name: Branch ID
+        run: echo "##[set-output name=id;]$(git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}')"
+        id: branch
+      - name: Match Branch
+        run: git show-ref | grep ${{ steps.branch.outputs.id }} | awk '{print $2;}'
+
