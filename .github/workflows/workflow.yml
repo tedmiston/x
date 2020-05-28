@@ -16,5 +16,7 @@ jobs:
         run: echo running on branch ${GITHUB_REF##*/}
       - name: Environemnt Variables
         run: env
+      - name: Github
+        run: git --no-pager branch
       - name: Build
         run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
