@@ -24,5 +24,7 @@ jobs:
         run: git --no-pager branch -r
       - name: Github
         run: git --no-pager show-branch
+      - name: Github
+        run: git show-ref
       - name: Build
         run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
