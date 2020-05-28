@@ -19,7 +19,9 @@ jobs:
       - name: Github
         run: export BRANCH_ID=`git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}'`
       - name: Github
-        run: git show-ref | grep '$BRANCH_ID' | awk '{print $2;}'
+        run: git show-ref
+      - name: Github
+        run: echo $BRANCH_ID
       - name: test
         run: git rev-parse HEAD
       - name: Build
