@@ -18,5 +18,11 @@ jobs:
         run: env
       - name: Github
         run: git --no-pager branch
+      - name: Github
+        run: git --no-pager branch -a
+      - name: Github
+        run: git --no-pager branch -r
+      - name: Github
+        run: git --no-pager show-branch
       - name: Build
         run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
