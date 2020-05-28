@@ -19,6 +19,8 @@ jobs:
       - name: Github
         run: git --no-pager log --first-parent --pretty=oneline 
       - name: Github
+        run: git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}' 
+      - name: Github
         run: git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}' | git --no-pager branch --contains
       - name: Build
         run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
