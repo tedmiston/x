@@ -13,7 +13,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Set Env
-        run: echo '::set-env name=BRANCH_ID::`git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}'`'
+        run: echo '::set-env name=BRANCH_ID::`git --no-pager log --first-parent --pretty=oneline | head -1 |  awk "{print $3;}"`'
       - name: Github
         run: git --no-pager log --first-parent --pretty=oneline | head -1 |  awk '{print $3;}'
       - name: Github
